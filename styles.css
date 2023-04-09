@@ -1,0 +1,17 @@
+* {
+    margin: 0;    
+}
+
+html {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+:root {
+--purple: rgba(115, 63, 200, 1);
+--grey-100: rgba(28, 35, 48, 1);
+--grey-90: rgba(72, 85, 106, 1);
+--white-100: rgba(255, 255, 255, 1);
+--white-70: rgba(255, 255, 255, 0.7);
+--white-50: rgba(255, 255, 255, 0.5);
+--background: #ECF2F8;
+}
