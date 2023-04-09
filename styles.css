@@ -17,16 +17,30 @@ html {
 }
 
 body {
-  background-color: var(--background);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100vw;
+background-color: var(--background);
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
-  width: 80%;
-  height: 80%;
+  width: 80vw;
+  /* height: 80vh; */
+  background-color: pink;
+}
+
+@media(max-width: 375px) {
+    .grid-container {
+        grid-template-columns: 1;
+        grid-template-rows: auto;
+        width: 90vw
+    }
 }
 
 .testimonial {
@@ -43,13 +57,23 @@ body {
 .img-name {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 
 .img-container {
-  width: 1.75rem;
-  height: 1.75rem;
-  border: 2px solid var(--grey-100);
-  border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+width: 1.75rem;
+height: 1.75rem;
+border: 2px solid var(--grey-100);
+border-radius: 50%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
 }
 
 .name-container {
@@ -78,12 +102,11 @@ p.verification {
 /*Content*/
 
 h1 {
-  font-family: "Barlow Semi Condensed";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  color: var(--white-100);
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
 }
 
 h2 {
@@ -94,3 +117,125 @@ h2 {
   line-height: 1.125rem;
   color: #cfcfcf;
 }
+
+/*Styling the Tiles and Layout*/
+
+.daniel.testimonial {
+   grid-column: 1/ 4;
+    grid-row: 1 / 2;
+    background-color: var(--purple);
+    background-image: url(/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 75% 0%;
+    background-size: auto;
+}
+
+@media(max-width: 375px) {
+    .daniel.testimonial {
+        grid-column: 1;
+    }
+}
+
+
+.daniel.img-container {
+    border: 2px solid rgba(167, 117, 241, 1);
+  }
+
+
+
+
+
+
+
+.jonathan.testimonial {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    background-color: var(--grey-100);
+}
+
+
+@media(max-width: 375px) {
+    .jonathan.testimonial {
+        grid-column: 1;
+    }
+}
+
+.jonathan.img-container {
+    border: 2px solid rgba(72, 85, 106, 1);
+  }
+
+.jeanette.testimonial {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+
+@media(max-width: 375px) {
+    .jeanette.testimonial {
+        grid-column: 1;
+    }
+}
+
+.jeanette .img-container {
+    border: 2px solid rgba(255, 255, 255, 1);
+  }
+
+
+.patrick.testimonial {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    background-color: rgba(25, 32, 45, 1);
+}
+
+
+@media(max-width: 375px) {
+    .patrick.testimonial {
+        grid-column: 1;
+    }
+}
+
+.patrick.img-container {
+    border: 2px solid rgba(115, 63, 200, 1);
+  }
+
+.kira.testimonial {
+    
+    grid-row: 1 / 3;
+    
+}
+
+
+@media(max-width: 375px) {
+    .kira.testimonial {
+        grid-column: 1;
+    }
+}
+
+
+/*color adjustments on the tiles */
+
+.daniel .name,
+h1 {
+    color: var(--white-100)
+}
+
+.daniel .name,
+.jonathan .name,
+.patrick .name{
+    color: var(--white-100)
+}
+
+
+.kira h1,
+.jeanette h1 {
+    color: var(--grey-100)
+}
+
+.kira .verification,
+.jeanette .verification {
+    color: rgba(72, 85, 106, 1);
+}
+
+
+
+
